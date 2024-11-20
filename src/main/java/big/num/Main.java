@@ -36,7 +36,7 @@ public class Main {
                         e.printStackTrace();
 
                         System.out.println();
-                        System.out.print("To see available constants enter 'constants'");
+                        System.out.println("To see available constants enter 'constants'");
                     }
                 }
             }
