@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 import big.num.engine.CalculatorEngine;
+import big.num.engine.Constants;
 import big.num.util.AnsiColor;
 
 public class Main {
@@ -22,12 +23,20 @@ public class Main {
                             System.out.flush();
                             continue;
                         }
+                        else if (line.equals("constants")) {
+                            Constants.print();
+                            continue;
+                        }
+
                         BigDecimal result = calculatorEngine.evaluate(line, false);
                         System.out.print(AnsiColor.GREEN);
                         System.out.println(beautify(result));
                     }
                     catch (Exception e) {
                         e.printStackTrace();
+
+                        System.out.println();
+                        System.out.print("To see available constants enter 'constants'");
                     }
                 }
             }
@@ -42,8 +51,6 @@ public class Main {
         StringBuilder valueWithCommas = new StringBuilder();
         int dotIndex = valueString.indexOf(".");
         dotIndex = (dotIndex == -1)? valueString.length() : dotIndex;
-        //10,000.00
-        // 111,123.2
         for (int i = 0; i < dotIndex; i++) {
             valueWithCommas.append(valueString.charAt(i));
             if ((dotIndex - i - 1) % 3 == 0 && i != dotIndex - 1) {
