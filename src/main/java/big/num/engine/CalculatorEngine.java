@@ -45,6 +45,9 @@ public class CalculatorEngine {
     }
 
     private String replaceConstants(String expression) {
+        expression = expression.replace("e", Constants.e.toString());
+        expression = expression.replace("pi", Constants.pi.toString());
+
         return expression;
     }
 
