@@ -22,7 +22,9 @@ public interface Operator {
         ( 
             charBefore == null || 
             operators.contains(charBefore) || 
-            charBefore == '('
+            charBefore == '(' ||
+            charBefore == 'E' ||
+            charBefore == 'e'
         );
         
         if ( isNegativeSign ) {
