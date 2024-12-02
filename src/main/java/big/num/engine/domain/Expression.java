@@ -133,7 +133,10 @@ public class Expression {
                 while(input.charAt(parenIndex) != '(') {
                     parenIndex++;
                 }
-                base = new BigDecimal(input.substring(index + 3, parenIndex));
+                if (parenIndex == index + 3)
+                    base = BigDecimal.TEN;
+                else 
+                    base = new BigDecimal(input.substring(index + 3, parenIndex));
                 start = index;
             }
 

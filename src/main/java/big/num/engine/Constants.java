@@ -18,7 +18,6 @@ public class Constants {
     public static BigDecimal sigma = new BigDecimal(5.670374419E-8);
     public static BigDecimal mu0 = new BigDecimal(4 * Math.PI * 1E-7);
     public static BigDecimal epsilon0 = new BigDecimal(8.8541878128E-12);
-    public static BigDecimal g = new BigDecimal(9.80665);
 
 
     public static Map<String, BigDecimal> constants = Map.ofEntries(
@@ -34,8 +33,7 @@ public class Constants {
         Map.entry("R", R),
         Map.entry("sigma", sigma),
         Map.entry("mu0", mu0),
-        Map.entry("epsilon0", epsilon0),
-        Map.entry("g", g)
+        Map.entry("epsilon0", epsilon0)
     );
     
 
