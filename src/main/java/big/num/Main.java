@@ -29,6 +29,9 @@ public class Main {
                             Constants.print();
                             continue;
                         }
+                        else if (line.equals("quit") || line.equals("close")) {
+                            break;
+                        }
 
                         BigDecimal result = calculatorEngine.evaluate(line, false);
                         System.out.print(AnsiColor.GREEN);
